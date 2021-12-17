@@ -1,4 +1,4 @@
-# TempFanCam (c) BlackFish 2020
+# TempFanCam (c) BlackFish 2021
 # -*- coding: utf-8 -*-
 from Components.Converter.Converter import Converter
 from Components.Sensors import sensors
