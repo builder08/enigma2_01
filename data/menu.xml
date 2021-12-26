@@ -27,6 +27,10 @@
 		<item weight="15" level="0" text="Network" entryID="device_screen"><screen module="About" screen="SystemNetworkInfo"/></item>
 		<item weight="20" level="1" text="Service" entryID="service_info_screen"><screen module="ServiceInfo" screen="ServiceInfo"/></item>
 		<item weight="25" level="2" text="Streaming clients info" entryID="streaming_clients_info_screen"><screen module="StreamingClientsInfo"/></item>
+		<item weight="30" level="0" text="Geolocation" entryID="geolocation_screen"><screen module="About" screen="Geolocation"/></item>
+		<item weight="35" level="0" text="QR code" entryID="qr_code_screen"><screen module="About" screen="QRCode"/></item>
+		<item weight="40" level="0" text="Development sponsors" entryID="development_sponsors_screen"><screen module="About" screen="DevelopmentSponsors"/></item>
+		<item weight="45" level="0" text="About Image" entryID="about_image_screen"><screen module="About" screen="AboutImage"/></item>
 	</menu>
 
 	<!-- Menu / Timer -->
