@@ -24698,9 +24698,6 @@ msgstr "Об имидже"
 msgid "Thanks"
 msgstr "Благодарности"
 
-msgid "Thanks"
-msgstr "Благодарности"
-
 msgid "OpenFIX is a project focused on open source dvb receivers software development using the linux operating system and the Enigma2 application.\n"
 "Copyright © 2019-2022\n"
 "Distributed without any guarantee.\n"
