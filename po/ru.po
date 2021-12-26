@@ -1,15 +1,12 @@
-# openATV <openatv@gmail.com>, 2021.
-# igorrrrr <igorzhugan66@gmail.com>, 2021.
-# Artem <Localizer_in_Russian@protonmail.com>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: Enigma2 OpenXXX\n"
+"Project-Id-Version: Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-29 21:27+0000\n"
 "PO-Revision-Date: 2021-12-03 16:50+0000\n"
-"Last-Translator: igorrrrr <igorzhugan66@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/openatv/"
-"enigma2-7-0-po/ru/>\n"
+"Last-Translator: yuju <yuju@mail.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"enigma2>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2336,10 +2333,10 @@ msgid "Aborting updateprogress"
 msgstr "Обновление отменено"
 
 msgid "About"
-msgstr "О программе"
+msgstr "Информация о системе"
 
 msgid "About..."
-msgstr "О программе..."
+msgstr "Информация о системе..."
 
 msgid "Accept the current selection"
 msgstr "Принять текущий выбор"
@@ -3867,9 +3864,6 @@ msgstr "Кнопки"
 
 msgid "ButtonSetup"
 msgstr "Кнопки"
-
-msgid "By openATV Image Team"
-msgstr "Имидж OpenATV"
 
 msgid "Bypass HDMI EDID Check"
 msgstr "Пропустить проверку HDMI EDID"
@@ -9730,7 +9724,7 @@ msgid "Image Backup"
 msgstr "Рез.копирование имиджа"
 
 msgid "Image Information"
-msgstr "Информация об имидже"
+msgstr "Информация о системе"
 
 msgid "Image Manager"
 msgstr "Менеджер имиджа"
@@ -18550,7 +18544,10 @@ msgstr "ТЕКСТ"
 
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
-msgstr "Коррекция перевода Monja 02.12.2021"
+msgstr "Коррекция перевода\n"
+"yuju\n"
+"yuju@mail.ru\n"
+"2022"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS файл слишком большой для ISO9660 уровень 1!"
@@ -23916,9 +23913,6 @@ msgstr "Только HD"
 msgid "only in Standby"
 msgstr "Только в режиме ожидания"
 
-msgid "openATV"
-msgstr "OpenATV"
-
 msgid "original"
 msgstr "Оригинал"
 
@@ -24673,445 +24667,99 @@ msgstr "Переключение"
 msgid "®"
 msgstr "®"
 
-#~ msgid "%d-%m"
-#~ msgstr "%d-%m"
+msgid "Geolocation"
+msgstr "Местонахождение"
 
-#~ msgid "Add/remove change timer for current event"
-#~ msgstr "Добавить/удалить/изменить таймер для идущей передачи"
+msgid "QR code"
+msgstr "QR-код"
 
-#~ msgid ""
-#~ "Allows you to enable the twisted log. They contain very detailed "
-#~ "information of everything the twisted does. ('/tmp/twisted.log')"
-#~ msgstr ""
-#~ "Разрешить журнал отладки. Журнал отладки содержит подробную информацию "
-#~ "обо всем, что система делает.('/tmp/twisted.log')"
+msgid "QR code open"
+msgstr "QR-код открыть"
 
-#~ msgid "Allows you to setup the button to do what you choose."
-#~ msgstr "Настройте действия кнопок по Вашему усмотрению."
+msgid "In order to go to the image support forum, to learn news or ask questions, it is necessary to open a QR code and point a smartphone camera to it."
+msgstr "Для того, чтобы перейти на форум поддержки, узнать новости или задать вопросы, необходимо открыть QR-код и навести на него камеру смартфона."
 
-#~ msgid "Button"
-#~ msgstr "Кнопка"
+msgid "Development sponsors"
+msgstr "Спонсоры разработки"
 
-#~ msgid "Compensate for overscan"
-#~ msgstr "Компенсировать чрезмерную развертку"
+msgid "Become a member"
+msgstr "Стать участником"
 
-#~ msgid "Cutlist editor"
-#~ msgstr "Видео редактор"
+msgid "Attention sponsors!\n"
+"Your information may be posted on the previous page. It can be a logo, name, contacts or other information. Interested? Please write:\n"
+"blackfish.3654@gmail.com"
+msgstr "Вниманию спонсоров!\n"
+"Ваша информация может быть размещена на предыдущей странице. Это может быть логотип, название, контакты или другая информация. Заинтересовались? Пожалуйста, пишите:\n"
+"blackfish.3654@gmail.com"
 
-#~ msgid "Enable twisted log *"
-#~ msgstr "Включить журнал отладки *"
+msgid "About Image"
+msgstr "Об имидже"
 
-#~ msgid "Fontsize"
-#~ msgstr "Размер шрифта"
+msgid "Thanks"
+msgstr "Благодарности"
 
-#~ msgid "Go to first service"
-#~ msgstr "Перейти на первый канал"
+msgid "Thanks"
+msgstr "Благодарности"
 
-#~ msgid "Go to last service"
-#~ msgstr "Перейти на последний канал"
+msgid "OpenFIX is a project focused on open source dvb receivers software development using the linux operating system and the Enigma2 application.\n"
+"Copyright © 2019-2022\n"
+"Distributed without any guarantee.\n"
+"The terms of use are outlined at https://gisclub.tv"
+msgstr "OpenFIX - это проект, ориентированный на разработку программного обеспечения dvb-приемников с открытым исходным кодом с использованием операционной системы linux и графической оболочки Enigma2.\n"
+"Copyright © 2019-2022\n"
+"Распространяется без каких-либо гарантий.\n"
+"Условия использования изложены на https://gisclub.tv"
 
-#~ msgid "Go to next event"
-#~ msgstr "Перейти на след событие"
+msgid "Idea: BlackFish\n\n"
+"Support the author of the idea.\n"
+"Details by E-mail: blackfish.3654@gmail.com\n\n"
+"Thanks:\n"
+"https://gisclub.tv\n"
+"https://www.opena.tv\n"
+"https://www.openpli.org\n"
+"ShadowA\n"
+"moskvish"
 
-#~ msgid "Go to next page of service"
-#~ msgstr "Перейти на след страницу каналов"
+msgstr "Идея: BlackFish\n\n"
+"Поддержать автора идеи.\n"
+"Подробности по электронной почте: blackfish.3654@gmail.com\n\n"
+"Спасибо:\n"
+"https://gisclub.tv\n"
+"https://www.opena.tv\n"
+"https://www.openpli.org\n"
+"ShadowA\n"
+"moskvish"
 
-#~ msgid "Go to previous event"
-#~ msgstr "Перейти на пред событие"
+msgid "FFmpeg:\t\t%s"
+msgstr "Версия FFmpeg:\\t\\t%s"
 
-#~ msgid "Go to previous page of service"
-#~ msgstr "Перейти на пред страницу каналов"
+msgid "GCC:\t\t%s"
+msgstr "Версия GCC:\t\t%s"
 
-#~ msgid "Goto next day of events"
-#~ msgstr "Перейти на следующий день ТВ-гида"
+msgid "Glibc:\t\t%s"
+msgstr "Версия Glibc:\t\t%s"
 
-#~ msgid "Goto next page of events"
-#~ msgstr "Перейти на след страницу событий"
+msgid "Support:\t%s"
+msgstr "Поддержка имиджа:\t%s"
 
-#~ msgid "Goto previous day of events"
-#~ msgstr "Перейти на предыдущий день ТВ-гида"
+msgid "Image:\t\t%s"
+msgstr "Имидж:\t\t%s"
 
-#~ msgid "Goto previous page of events"
-#~ msgstr "Перейти на пред страницу событий"
+msgid "Selected Image:\t%s"
+msgstr "Выбранный имидж:\t%s"
 
-#~ msgid "List mode"
-#~ msgstr "Режим списка"
+msgid "CPU architecture:\t%s"
+msgstr "Архитектура процессора:\t%s"
 
-#~ msgid "Normal mode"
-#~ msgstr "Стандарт"
+msgid "CPU temperature:\t%s"
+msgstr "Температура процессора:\t%s"
 
-#~ msgid "OSD position setup"
-#~ msgstr "Настройка положения экранного меню"
+msgid "Build date:\t\t%s"
+msgstr "Дата сборки:\t\t%s"
 
-#~ msgid "Picon and service name"
-#~ msgstr "Пикон и название канала"
+msgid "Enigma2 version:\t%s"
+msgstr "Версия Enigma2:\t%s"
 
-#~ msgid "Preview selected channel"
-#~ msgstr "Предпросмотр выбранного канала"
+msgid "Last Enigma2 update:\t%s"
+msgstr "Последнее обновление Enigma2:\t%s"
 
-#~ msgid "Set time window to 1 hour"
-#~ msgstr "Установка времени окна на 1 час"
-
-#~ msgid "Set time window to 2 hours"
-#~ msgstr "Установка времени окна на 2 часа"
-
-#~ msgid "Set time window to 3 hours"
-#~ msgstr "Установка времени окна на 3 часа"
-
-#~ msgid "Set time window to 4 hours"
-#~ msgstr "Установка времени окна на 4 часа"
-
-#~ msgid "Set time window to 5 hours"
-#~ msgstr "Установка времени окна на 5 часов"
-
-#~ msgid "Set time window to 6 hours"
-#~ msgstr "Установка времени окна на 6 часов"
-
-#~ msgid "Show bouquet selection menu"
-#~ msgstr "Показать меню выбора фаворитов"
-
-#~ msgid "Stop previous broadcasted service on return to movielist."
-#~ msgstr ""
-#~ "Остановить предыдущий транслируемый канал по возвращении в список записей."
-
-#~ msgid "Switch between normal mode and list mode"
-#~ msgstr "Переход от стандартного режима к списку"
-
-#~ msgid ""
-#~ "Welcome to the cutlist editor.\n"
-#~ "\n"
-#~ "Seek to the start of the stuff you want to cut away. Press OK, select "
-#~ "'start cut'.\n"
-#~ "\n"
-#~ "Then seek to the end, press OK, select 'end cut'. That's it."
-#~ msgstr ""
-#~ "Добро пожаловать в редактор видео.\n"
-#~ "\n"
-#~ "Отметьте место с которого вы хотите начать редактирование. Нажмите OK, "
-#~ "выберите 'Начало редактирования'.\n"
-#~ "\n"
-#~ "После, отметьте точку окончания редактирования, нажмите OK, выберите "
-#~ "'Конец редактирования'. Вот и всё."
-
-#~ msgid "Zap to selected channel"
-#~ msgstr "Переключить на выбранный канал"
-
-#~ msgid ""
-#~ "Zap to selected channel, or show detailed event info (depends on "
-#~ "configuration)"
-#~ msgstr ""
-#~ "Переключить на выбранный канал или показать подробный ТВ-гид (Зависит от "
-#~ "конфигурации)"
-
-#~ msgid "save last directory on exit"
-#~ msgstr "Сохранить последний каталог при выходе"
-
-#~ msgid ""
-#~ "When enabled, the length of each recording will be shown in the movielist "
-#~ "(this might cause some additional loading time)."
-#~ msgstr ""
-#~ "Если эта функция включена, продолжительность каждой записи будет "
-#~ "отображаться в списке фильмов (это может вызвать дополнительное время "
-#~ "загрузки)."
-
-#~ msgid "Delete Lang"
-#~ msgstr "Удалить язык"
-
-#~ msgid "Delete Loc"
-#~ msgstr "Удалить Loc"
-
-#~ msgid "Install Lang"
-#~ msgstr "Установка"
-
-#~ msgid "Install Loc"
-#~ msgstr "Установить"
-
-#~ msgid "Job Manager"
-#~ msgstr "Диспетчер задач"
-
-#~ msgid "Plugin browser"
-#~ msgstr "Установленные плагины"
-
-#~ msgid "Cpu"
-#~ msgstr "ЦП"
-
-#~ msgid "CronManager"
-#~ msgstr "Планировщик"
-
-#~ msgid "Image Info"
-#~ msgstr "Информация об имидже"
-
-#~ msgid "Infos"
-#~ msgstr "Сведения"
-
-#~ msgid "JobManager"
-#~ msgstr "Управление заданиями"
-
-#~ msgid "MemInfo"
-#~ msgstr "Оперативная память"
-
-#~ msgid "MountManager"
-#~ msgstr "Установки монтирования"
-
-#~ msgid "Ram"
-#~ msgstr "Оперативная память"
-
-#~ msgid "SwapManager"
-#~ msgstr "Управление подкачкой"
-
-#~ msgid "restart GUI"
-#~ msgstr "Перезапуск GUI"
-
-#~ msgid "Restart Gui"
-#~ msgstr "Перезагрузить интерфейс"
-
-#~ msgid "AC3"
-#~ msgstr "AC3"
-
-#~ msgid "DTS"
-#~ msgstr "DTS"
-
-#~ msgid "Delete the all the text"
-#~ msgstr "Удалить весь текст"
-
-#~ msgid "Install settings, skins, software..."
-#~ msgstr "Установка настроек, скинов, ПО..."
-
-#~ msgid "PicturePlayer"
-#~ msgstr "Просмотр фото"
-
-#~ msgid "Please choose he package..."
-#~ msgstr "Пожалуйста, выберите пакет..."
-
-#, python-format
-#~ msgid ""
-#~ "The installation of the default settings is finished. You can now "
-#~ "continue configuring your %s %s by pressing the OK button on the remote "
-#~ "control."
-#~ msgstr ""
-#~ "Установка стандартных настроек закончена. Вы можете продолжить настройку "
-#~ "Вашего %s %s, нажав кнопку ОК на пульте ДУ."
-
-#~ msgid "Autorecord location"
-#~ msgstr "Каталог для автоматической записи"
-
-#~ msgid "Instant record location"
-#~ msgstr "Расположение немедленной записи"
-
-#~ msgid "Instant recordings location"
-#~ msgstr "Расположение немедленных записей"
-
-#~ msgid "Movie location"
-#~ msgstr "Расположение фильма"
-
-#~ msgid "New timers location"
-#~ msgstr "Расположение новых таймеров"
-
-#, fuzzy
-#~ msgid "No action required."
-#~ msgstr "Обновлений не требуется!"
-
-#, fuzzy
-#~ msgid "Please wait, restarting cardserver."
-#~ msgstr "Пожалуйста, подождите (Пакеты обновляются)"
-
-#, fuzzy
-#~ msgid "Please wait, restarting softcam."
-#~ msgstr "Подождите, идёт сбор данных"
-
-#, fuzzy
-#~ msgid "Press OK to install and use this locale."
-#~ msgstr "Нажмите OK, чтобы выбрать канал."
-
-#, fuzzy
-#~ msgid "Press OK to use this locale."
-#~ msgstr "Нажмите OK для начала поиска"
-
-#, fuzzy
-#~ msgid "Select Card Server"
-#~ msgstr "Выберите эмулятор или кардсервер"
-
-#, fuzzy
-#~ msgid "Select Softcam"
-#~ msgstr "Выбор Cam 1"
-
-#~ msgid ""
-#~ "Set the default location for your autorecord-files. Press 'OK' to add new "
-#~ "locations, select left/right to select an existing location."
-#~ msgstr ""
-#~ "Назначьте расположение для файлов автозаписи. Нажмите 'OK' чтобы добавить "
-#~ "новый каталог, либо кнопками Вправо/Влево выберите существующий каталог"
-
-#, fuzzy
-#~ msgid "Softcam setup"
-#~ msgstr "Панель эмуляторов"
-
-#~ msgid ""
-#~ "The directory %s is not a EXT2, EXT3, EXT4, NFS or CIFS partition.\n"
-#~ "Make sure you select a valid partition type."
-#~ msgstr ""
-#~ "Выбранная папка %s не является разделом EXT2, EXT3, EXT4, NFS или CIFS\n"
-#~ "Пожалуйста, убедитесь что выбрали правильный раздел"
-
-#~ msgid ""
-#~ "The directory %s is not writable.\n"
-#~ "Make sure you select a writable directory instead."
-#~ msgstr ""
-#~ "В эту папку %s записать нельзя\n"
-#~ "Убедитесь, что взамен выбрали нужную папку"
-
-#, fuzzy
-#~ msgid "This is already the active locale."
-#~ msgstr "Это устройство уже смонтировано как жёсткий диск"
-
-#, fuzzy
-#~ msgid "This is the currently selected locale."
-#~ msgstr "Удалить выбранный заголовок"
-
-#~ msgid "Timer record location"
-#~ msgstr "Расположение записей таймера"
-
-#~ msgid ""
-#~ "You seem to be in timeshft, the service will briefly stop as timeshfit "
-#~ "stops."
-#~ msgstr "Видимо у Вас активирован таймшифт. Остановите его"
-
-#~ msgid "disable"
-#~ msgstr "Выключить"
-
-#~ msgid "enable"
-#~ msgstr "Включить"
-
-#~ msgid "false"
-#~ msgstr "Нет"
-
-#~ msgid "on"
-#~ msgstr "Вкл"
-
-#~ msgid "save"
-#~ msgstr "Сохранить"
-
-#~ msgid "true"
-#~ msgstr "Да"
-
-#~ msgid "Enable Autorecord"
-#~ msgstr "Включить автозапись"
-
-#~ msgid ""
-#~ "If set to 'yes', enable autorecord for automatically background timeshift"
-#~ msgstr ""
-#~ "Если выберите 'Да', будет включена автоматическая запись таймшифта в "
-#~ "фоновом режиме"
-
-#~ msgid "Remote control model shown"
-#~ msgstr "Показать модель пульта ДУ"
-
-#~ msgid ""
-#~ "Which remote control gets shown. Only influences graphical representation."
-#~ msgstr ""
-#~ "Здесь вы можете установить, какой пульт дистанционного управления "
-#~ "отображать графически."
-
-#, fuzzy
-#~ msgid "Please set your time zone"
-#~ msgstr "Настройки часового пояса"
-
-#~ msgid "Allocate unused memory index"
-#~ msgstr "Выделите неиспользованные индексы памяти"
-
-#~ msgid "Calculate all positions"
-#~ msgstr "Рассчитать все позиции"
-
-#~ msgid "Configuration mode: %s"
-#~ msgstr "Режим конфигурации %s"
-
-#~ msgid "Goto index position"
-#~ msgstr "Номер позиции"
-
-#~ msgid "Initial lock ratio"
-#~ msgstr "Начальное соотношение захвата"
-
-#~ msgid "Initial signal quality"
-#~ msgstr "Начальное качество сигнала"
-
-#~ msgid "Initial signal quality:"
-#~ msgstr "Начальное качество сигнала"
-
-#~ msgid "Lock ratio"
-#~ msgstr "Качество захвата"
-
-#~ msgid "Move to position X"
-#~ msgstr "Перемещение к позиции Х"
-
-#~ msgid "Rotor step position:"
-#~ msgstr "Шаг позиции ротора"
-
-#~ msgid "Satellite longitude:"
-#~ msgstr "Долгота спутника"
-
-#~ msgid "Signal OK, proceeding"
-#~ msgstr "Сигнал ОК, в процессе"
-
-#~ msgid "Signal quality"
-#~ msgstr "Качество сигнала"
-
-#~ msgid "Site latitude"
-#~ msgstr "Ширина сайта"
-
-#~ msgid "Site longitude"
-#~ msgstr "Длина сайта"
-
-#~ msgid "Store at index"
-#~ msgstr "Сохранить номер"
-
-#~ msgid "Strongest position"
-#~ msgstr "Лучшая позиция"
-
-#~ msgid "USALS calibration"
-#~ msgstr "Калибровка USALS"
-
-#~ msgid "Using LNB %d"
-#~ msgstr "Используемый LNB %d"
-
-#~ msgid "Using tuner %s"
-#~ msgstr "Используемый тюнер %s"
-
-#~ msgid "Weighted position"
-#~ msgstr "Анализируем позицию"
-
-#~ msgid ""
-#~ "Configure whether another tuner from the preferred list is allocated "
-#~ "instead of sharing a tuner that is already active recording the same "
-#~ "channel."
-#~ msgstr ""
-#~ "Выделить свободный тюнер из списка предпочитаемых или совместно "
-#~ "использовать тюнер, который уже записывает тот же канал."
-
-#~ msgid "Experimental: strict limitation to preferred tuners"
-#~ msgstr "Строгие ограничения для приоритетных тюнеров"
-
-#~ msgid ""
-#~ "In expert mode, configure which tuners will be preferred, when more than "
-#~ "one tuner is available."
-#~ msgstr "Укажите приоритетные тюнеры, если доступно более одного тюнера."
-
-#~ msgid "Preferred tuners, multiple selection allowed"
-#~ msgstr "Приоритетные тюнеры"
-
-#, fuzzy
-#~ msgid "%s %s %s."
-#~ msgstr "Перезапуск %s %s"
-
-#~ msgid "OSD Settings"
-#~ msgstr "Общие настройки"
-
-#~ msgid "Show on Display"
-#~ msgstr "Показать на дисплее"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the UP and DOWN buttons to select your locale/language then press the "
-#~ "OK or GREEN button to continue."
-#~ msgstr ""
-#~ "Пожалуйста, используйте клавиши Вверх и Вниз для выбора языка. Далее "
-#~ "нажмите ОК"
