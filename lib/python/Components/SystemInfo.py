@@ -4,7 +4,7 @@ from os.path import exists as fileAccess, isdir, isfile, join as pathjoin
 from re import findall
 from subprocess import PIPE, Popen
 
-from boxbranding import getBrandOEM, getDisplayType, getHaveAVJACK, getHaveDVI, getHaveHDMI, getHaveRCA, getHaveSCART, getHaveSCARTYUV, getHaveYUV, getMachineBuild, getMachineMtdRoot
+from boxbranding import getBrandOEM, getDisplayType, getHaveAVJACK, getHaveDVI, getHaveHDMI, getHaveRCA, getHaveSCART, getHaveSCARTYUV, getHaveYUV, getMachineBuild, getMachineMtdRoot, getImageArch
 from enigma import Misc_Options, eDVBCIInterfaces, eDVBResourceManager, eGetEnigmaDebugLvl
 
 from Tools.Directories import SCOPE_LIBDIR, SCOPE_SKINS, fileCheck, fileReadLine, fileReadLines, resolveFilename, fileExists, fileHas, fileReadLine, pathExists
@@ -224,7 +224,7 @@ def Check_Softcam():
 	return found
 
 model = BoxInfo.getItem("model")
-
+architecture = getImageArch()
 BoxInfo.setItem("DebugLevel", eGetEnigmaDebugLvl())
 BoxInfo.setItem("InDebugMode", eGetEnigmaDebugLvl() >= 4)
 BoxInfo.setItem("ModuleLayout", getModuleLayout(), immutable=True)
@@ -336,3 +336,5 @@ SystemInfo["HasFullHDSkinSupport"] = model not in ("et4000", "et5000", "sh1", "h
 SystemInfo["CanProc"] = SystemInfo["HasMMC"] and getBrandOEM() != "vuplus"
 SystemInfo["canRecovery"] = getMachineBuild() in ("hd51", "vs1500", "h7", "8100s") and ("disk.img", "mmcblk0p1") or getMachineBuild() in ("xc7439", "osmio4k", "osmio4kplus", "osmini4k") and ("emmc.img", "mmcblk1p1") or getMachineBuild() in ("gbmv200", "cc1", "sf8008", "sf8008m", "sf8008opt", "ustym4kpro", "beyonwizv2", "viper4k") and ("usb_update.bin", "none")
 SystemInfo["SoftCam"] = Check_Softcam()
+SystemInfo["ArchIsARM64"] = architecture == "aarch64" or "64" in architecture
+SystemInfo["ArchIsARM"] = architecture.startswith("arm") or architecture.startswith("cortex")
