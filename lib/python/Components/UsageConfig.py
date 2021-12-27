@@ -110,7 +110,7 @@ def InitUsageConfig():
 
 	config.usage.servicetype_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename"))])
 	config.usage.servicetype_icon_mode.addNotifier(refreshServiceList)
-	config.usage.crypto_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename"))])
+	config.usage.crypto_icon_mode = ConfigSelection(default="2", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename"))])
 	config.usage.crypto_icon_mode.addNotifier(refreshServiceList)
 	config.usage.record_indicator_mode = ConfigSelection(default="3", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename")), ("3", _("Red colored"))])
 	config.usage.record_indicator_mode.addNotifier(refreshServiceList)
@@ -198,7 +198,7 @@ def InitUsageConfig():
 	config.usage.show_infobar_do_dimming = ConfigYesNo(default=False)
 	config.usage.show_infobar_dimming_speed = ConfigSelectionNumber(min=1, max=40, stepwidth=1, default=10, wraparound=True)
 	config.usage.show_infobar_channel_number = ConfigYesNo(default=False)
-	config.usage.show_second_infobar = ConfigSelection(default="1", choices=[("0", _("Off")), ("1", _("Event Info")), ("2", _("2nd Infobar INFO")), ("3", _("2nd Infobar ECM"))])
+	config.usage.show_second_infobar = ConfigSelection(default="2", choices=[("0", _("Off")), ("1", _("Event Info")), ("2", _("2nd Infobar INFO")), ("3", _("2nd Infobar ECM"))])
 	config.usage.second_infobar_timeout = ConfigSelection(default="5", choices=[("0", _("No timeout"))] + choicelist)
 
 	def showsecondinfobarChanged(configElement):
@@ -538,7 +538,7 @@ def InitUsageConfig():
 						("0", _("InfoBar")),
 						("1", _("Channel List"))])
 	config.usage.show_bouquetalways = ConfigYesNo(default=False)
-	config.usage.show_event_progress_in_servicelist = ConfigSelection(default='barright', choices=[
+	config.usage.show_event_progress_in_servicelist = ConfigSelection(default='percright', choices=[
 		('barleft', _("Progress bar left")),
 		('barright', _("Progress bar right")),
 		('percleft', _("Percentage left")),
@@ -1461,7 +1461,7 @@ def InitUsageConfig():
 					("2", _("Yes, but if not available show the timer list")),
 					("3", _("Yes, but if not available show the plugin browser"))])
 	config.plisettings.ColouredButtons = ConfigYesNo(default=False)
-	config.plisettings.InfoBarEpg_mode = ConfigSelection(default="3", choices=[
+	config.plisettings.InfoBarEpg_mode = ConfigSelection(default="0", choices=[
 					("0", _("as plugin in extended bar")),
 					("1", _("with long OK press")),
 					("2", _("with exit button")),
