@@ -162,7 +162,7 @@ machinename = getMachineName()
 machinebrand = getMachineBrand()
 OEMname = getBrandOEM()
 
-INFO_Panel_Version = 'Info-Panel V1.2'
+INFO_Panel_Version = 'Info-Panel'
 print("[Info-Panel] machinebrand: %s" % (machinebrand))
 print("[Info-Panel] machinename: %s" % (machinename))
 print("[Info-Panel] oem name: %s" % (OEMname))
