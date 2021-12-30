@@ -269,7 +269,7 @@ class MessageBox(Screen, HelpableScreen):
 	def __repr__(self):
 		return "%s(%s)" % (str(type(self)), self.text)
 
-		def getListWidth(self):
+	def getListWidth(self):
 		def getListLineTextWidth(text):
 			self["autoresize"].setText(text)
 			return self["autoresize"].getSize()[0]
