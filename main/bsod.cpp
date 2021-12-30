@@ -16,7 +16,7 @@
 
 static const char *crash_emailaddr =
 #ifndef CRASH_EMAILADDR
-	"the openATV forum";
+	"the OpenFIX forum";
 #else
 	CRASH_EMAILADDR;
 #endif
@@ -190,7 +190,7 @@ void bsodFatal(const char *component)
 		strftime(tm_str, sizeof(tm_str), "%a %b %_d %T %Y", &tm);
 
 		fprintf(f,
-			"openATV Enigma2 crash log\n\n"
+			"OpenFIX Enigma2 crash log\n\n"
 			"crashdate=%s\n"
 			"compiledate=%s\n"
 			"skin=%s\n"
