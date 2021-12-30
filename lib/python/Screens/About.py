@@ -930,7 +930,7 @@ class SystemNetworkInfo(Screen):
 class AboutSummary(Screen):
 	def __init__(self, session, parent):
 		Screen.__init__(self, session, parent=parent)
-		self["selected"] = StaticText("openATV:" + getImageVersion())
+		self["selected"] = StaticText("OpenFIX:" + getImageVersion())
 
 		AboutText = getAboutText()[1]
 
@@ -983,7 +983,7 @@ class ViewGitLog(Screen):
 		fd = open('/etc/' + self.logtype + '-git.log', 'r')
 		releasenotes = fd.read()
 		fd.close()
-		releasenotes = releasenotes.replace('\nopenatv: build', "\n\nopenatv: build")
+		releasenotes = releasenotes.replace('\nopenfix: build', "\n\nopenfix: build")
 		self["text"].setText(releasenotes)
 		summarytext = releasenotes
 		try:
