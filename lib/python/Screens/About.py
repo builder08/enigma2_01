@@ -130,7 +130,8 @@ def getAboutText():
 	AboutText += _("Build date:\t\t%s") % about.getBuildDateString() + "\n"	
 	# AboutText += _("Installed:\t\t%s") % about.getFlashDateString() + "\n"
 	AboutText += _("Enigma2 version:\t%s") % about.getEnigmaVersionString() + "\n"         
-	AboutText += _("Last Enigma2 update:\t%s") % MyDateConverter(getEnigmaVersionString()) + "\n"
+	# AboutText += _("Last Enigma2 update:\t%s") % MyDateConverter(getEnigmaVersionString()) + "\n"
+	AboutText += _("Last update:\t%s") % about.getImageVersionString() + "\n"
 	AboutText += _("Enigma2 debug level:\t%d") % eGetEnigmaDebugLvl() + "\n"
 
 	skinWidth = getDesktop(0).size().width()
