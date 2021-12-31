@@ -1,4 +1,4 @@
-SUBDIRS = fonts keymaps
+SUBDIRS = fonts keymaps VirtualKeyBoard_Icons
 
 dist_pkgdata_DATA = \
 	encoding.conf \
