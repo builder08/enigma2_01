@@ -10584,7 +10584,7 @@ msgstr "Последняя скорость"
 
 #, python-format
 msgid "Last update:\t%s"
-msgstr "Обновление\t%s"
+msgstr "Последнее обновление:\t%s"
 
 msgid "Last used share: "
 msgstr "Последний сетевой диск "
