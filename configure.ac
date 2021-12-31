@@ -875,6 +875,9 @@ data/grautec70x0/Makefile
 data/grautec70x0/fonts/Makefile
 data/grautec8000/Makefile
 data/grautec8000/fonts/Makefile
+data/VirtualKeyBoard_Icons/Makefile
+data/VirtualKeyBoard_Icons/buttonsHD/Makefile
+data/VirtualKeyBoard_Icons/buttonsFHD/Makefile
 data/vfd128/Makefile
 data/vfd140/Makefile
 data/vfd255/Makefile
