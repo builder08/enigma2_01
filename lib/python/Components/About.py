@@ -14,9 +14,19 @@ from subprocess import PIPE, Popen
 
 MODULE_NAME = __name__.split(".")[-1]
 
-def getImageVersionString():
-	return getImageVersion()
+# def getImageVersionString():
+# 	return getImageVersion()
 
+def getImageVersionString():
+	try:
+		if os.path.isfile('/var/lib/opkg/status'):
+			st = os.stat('/var/lib/opkg/status')
+		tm = time.localtime(st.st_mtime)
+		if tm.tm_year >= 2018:
+			return time.strftime("%d.%m.%Y %H:%M:%S", tm)
+	except:
+		pass
+	return _("unavailable")
 
 def getVersionString():
 	return getImageVersion()
@@ -34,7 +44,8 @@ def getEnigmaVersionString():
 	enigma_version = enigma.getEnigmaVersionString()
 	if '-(no branch)' in enigma_version:
 		enigma_version = enigma_version [:-12]
-	return enigma_version	
+	# return enigma_version	
+	return "%s.%s.%s" % (enigma_version[8:10], enigma_version[5:7], enigma_version[:4])
 
 def getGStreamerVersionString():
 	try:
@@ -179,7 +190,7 @@ def getBuildDateString():
 	try:
 		if os.path.isfile('/etc/version'):
 			version = open("/etc/version","r").read()
-			return "%s-%s-%s" % (version[:4], version[4:6], version[6:8])
+			return "%s.%s.%s" % (version[6:8], version[4:6], version[:4])
 	except:
 		pass
 	return _("unknown")
