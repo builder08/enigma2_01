@@ -463,14 +463,14 @@ class Status:
 						'pairwise_ciphers': scanresults[i].pairwise_ciphers,
 						'authentication_suites': scanresults[i].authentication_suites,
 					}
-				#data['bitrate'] = aps[ssid]["maxrate"]
-				data['encryption'] = aps[ssid]["encrypted"]
-				data['quality'] = aps[ssid]["quality"]
-				data['signal'] = aps[ssid]["signal"]
-				data['channel'] = aps[ssid]["channel"]
-				data['encryption_type'] = aps[ssid]["encryption_type"]
-				#data['frequency'] = aps[ssid]["frequency"]
-				data['frequency_norm'] = aps[ssid]["frequency_norm"]
+				# data['bitrate'] = aps[ssid]["maxrate"]
+				# data['encryption'] = aps[ssid]["encrypted"]
+				# data['quality'] = aps[ssid]["quality"]
+				# data['signal'] = aps[ssid]["signal"]
+				# data['channel'] = aps[ssid]["channel"]
+				# data['encryption_type'] = aps[ssid]["encryption_type"]
+				# data['frequency'] = aps[ssid]["frequency"]
+				# data['frequency_norm'] = aps[ssid]["frequency_norm"]
 
 		self.wlaniface[iface] = data
 		self.backupwlaniface = self.wlaniface
