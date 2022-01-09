@@ -425,7 +425,7 @@ class ForThanksOpen(Screen):
 		Screen.__init__(self, session)
 		self.setTitle(_("Thanks"))
 		self["key_red"] = Button(_("Cancel"))
-		self["Info"] = StaticText(_("Idea: BlackFish"  + "\n\n" "Do you want to support the author of the project?" + "\n" + "Details by E-mail: blackfish.3654@gmail.com" + "\n\n" "Thanks:" + "\n" "https://gisclub.tv" + "\n" "https://www.opena.tv" + "\n" "https://www.openpli.org" + "\n" "ShadowA" + "\n" "moskvish"))
+		self["Info"] = StaticText(_("Idea: BlackFish"  + "\n\n" "To support the author of the project, please write:" + "\n" + "blackfish.3654@gmail.com" + "\n\n" "Thanks:" + "\n" "https://gisclub.tv" + "\n" "https://www.opena.tv" + "\n" "https://www.openpli.org" + "\n" "ShadowA" + "\n" "moskvish"))
 		self["actions"] = ActionMap(["ColorActions", "SetupActions", "DirectionActions"],
 			{
 				"cancel": self.close,
