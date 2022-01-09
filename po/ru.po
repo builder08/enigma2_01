@@ -24708,7 +24708,7 @@ msgstr "OpenFIX - это проект, ориентированный на ра�
 "Условия использования изложены на https://gisclub.tv"
 
 msgid "Idea: BlackFish\n\n"
-"Support the author of the idea.\n"
+"Do you want to support the author of the project?\n"
 "Details by E-mail: blackfish.3654@gmail.com\n\n"
 "Thanks:\n"
 "https://gisclub.tv\n"
@@ -24718,7 +24718,7 @@ msgid "Idea: BlackFish\n\n"
 "moskvish"
 
 msgstr "Идея: BlackFish\n\n"
-"Поддержать автора идеи.\n"
+"Желаете поддержать автора проекта?\n"
 "Подробности по электронной почте: blackfish.3654@gmail.com\n\n"
 "Спасибо:\n"
 "https://gisclub.tv\n"
