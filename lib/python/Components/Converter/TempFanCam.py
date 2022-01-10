@@ -119,7 +119,7 @@ class TempFanCam(Poll, Converter, object):
                     if 'oscam-emu' in line:
                         return 'oscam-emu'
                     if 'oscam' in line:
-                        return 'OSCam-emu'
+                        return 'OSCam'
                     if 'camd3' in line:
                         if 'mgcamd' not in line:
                             return 'Camd3'
