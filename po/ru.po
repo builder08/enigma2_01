@@ -5843,13 +5843,13 @@ msgid "Custom skip time for '7'/'9' buttons"
 msgstr "Время пропуска для кнопок '7'/'9'"
 
 msgid "Customise"
-msgstr "Доп. настройки"
+msgstr "Дополнительные настройки"
 
 msgid "Customise enigma2 personal settings"
 msgstr "Пользовательские настройки Enigma2"
 
 msgid "Customize"
-msgstr "Доп. настройки"
+msgstr "Дополнительные настройки"
 
 msgid "Cut"
 msgstr "Нарезка"
@@ -7300,8 +7300,11 @@ msgstr "Прошедшее"
 msgid "Elapsed & Remaining"
 msgstr "Прошедшее и оставшееся"
 
+# msgid "Electronic Program Guide"
+# msgstr "Электронный ТВ-гид"
+
 msgid "Electronic Program Guide"
-msgstr "Электронный ТВ-гид"
+msgstr " "
 
 msgid "Email"
 msgstr "Электронная почта"
