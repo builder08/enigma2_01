@@ -45,7 +45,7 @@ from .ImageBackup import ImageBackup
 from .Flash_online import FlashOnline
 from .ImageWizard import ImageWizard
 from .Multibootmgr import MultiBootWizard
-from .BackupRestore import BackupSelection, RestoreMenu, BackupScreen, RestoreScreen, getBackupPath, getOldBackupPath, getBackupFilename, RestoreMyMetrixHD
+from .BackupRestore import BackupSelection, RestoreMenu, BackupScreen, RestoreScreen, getBackupPath, getOldBackupPath, getBackupFilename
 from .BackupRestore import InitConfig as BackupRestore_InitConfig
 from .SoftwareTools import iSoftwareTools
 import os
@@ -1613,19 +1613,19 @@ class UpdatePlugin(Screen):
 		# TODO: Use Twisted's URL fetcher, urlopen is evil. And it can
 		# run in parallel to the package update.
 		try:
-			urlopenATV = "http://ampel.mynonpublic.com/Ampel/index.php"
-			d = urlopen(urlopenATV)
+			urlOpenFIX = "http://wvsat.com/feeds/index.php"
+			d = urlopen(urlOpenFIX)
 			tmpStatus = d.read()
 			tmpStatus = six.ensure_str(tmpStatus)
 			if (os.path.exists("/etc/.beta") and 'rot.png' in tmpStatus) or 'gelb.png' in tmpStatus:
-				message = _("Caution update not yet tested !!") + "\n" + _("Update at your own risk") + "\n\n" + _("For more information see https://www.opena.tv") + "\n\n"# + _("Last Status Date") + ": "  + statusDate + "\n\n"
+				message = _("Caution update not yet tested !!") + "\n" + _("Update at your own risk") + "\n\n" + _("For more information see https://gisclub.tv") + "\n\n"# + _("Last Status Date") + ": "  + statusDate + "\n\n"
 				default = False
 			elif 'rot.png' in tmpStatus:
-				message = _("Update is reported as faulty !!") + "\n" + _("Aborting updateprogress") + "\n\n" + _("For more information see https://www.opena.tv")# + "\n\n" + _("Last Status Date") + ": " + statusDate
+				message = _("Update is reported as faulty !!") + "\n" + _("Aborting updateprogress") + "\n\n" + _("For more information see https://gisclub.tv")# + "\n\n" + _("Last Status Date") + ": " + statusDate
 				default = False
 				doUpdate = False
 		except:
-			message = _("The status of the current update could not be checked because https://www.opena.tv could not be reached for some reason") + "\n"
+			message = _("The status of the current update could not be checked because https://gisclub.tv could not be reached for some reason") + "\n"
 			default = False
 		socket.setdefaulttimeout(currentTimeoutDefault)
 
@@ -1766,7 +1766,7 @@ class UpdatePlugin(Screen):
 					if packages:
 						international.deleteLanguagePackages(packages)
 					os_system("touch /etc/enigma2/.removelang")
-				self.restoreMetrixHD()
+				self.close()
 			else:
 				self.close()
 		else:
@@ -1778,23 +1778,6 @@ class UpdatePlugin(Screen):
 		if result is not None and result:
 			self.session.open(TryQuitMainloop, retvalue=2)
 		self.close()
-
-	def restoreMetrixHD(self):
-		try:
-			if config.skin.primary_skin.value == "MetrixHD/skin.MySkin.xml" and not os.path.exists("/usr/share/enigma2/MetrixHD/skin.MySkin.xml"):
-				self.session.openWithCallback(self.restoreMetrixHDCallback, RestoreMyMetrixHD)
-			elif config.skin.primary_skin.value == "MetrixHD/skin.MySkin.xml" and config.plugins.MyMetrixLiteOther.EHDenabled.value != '0':
-				from Plugins.Extensions.MyMetrixLite.ActivateSkinSettings import ActivateSkinSettings
-				ActivateSkinSettings().RefreshIcons()
-				self.restoreMetrixHDCallback()
-			else:
-				self.restoreMetrixHDCallback()
-		except:
-			self.restoreMetrixHDCallback()
-
-	def restoreMetrixHDCallback(self, ret=None):
-		self.session.openWithCallback(self.exitAnswer, MessageBox, _("Upgrade finished.") + " " + _("Do you want to reboot your %s %s?") % (getMachineBrand(), getMachineName()))
-
 
 class IPKGMenu(Screen):
 	skin = """

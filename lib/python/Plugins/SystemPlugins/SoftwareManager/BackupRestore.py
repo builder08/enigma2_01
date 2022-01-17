@@ -59,7 +59,6 @@ def InitConfig():
 		'/usr/lib/enigma2/python/Plugins/Extensions/VMC/DB/',
 		'/usr/lib/enigma2/python/Plugins/Extensions/VMC/youtv.pwd',
 		'/usr/lib/enigma2/python/Plugins/Extensions/VMC/vod.config',
-		'/usr/share/enigma2/MetrixHD/skinparts/',
 		'/usr/share/enigma2/display/skin_display_usr.xml',
 		'/usr/share/enigma2/display/userskin.png',
 		'/usr/lib/enigma2/python/Plugins/Extensions/SpecialJump/keymap_user.xml',
@@ -71,9 +70,6 @@ def InitConfig():
 		eEnv.resolve("${datadir}/enigma2/keymap.usr"),
 		eEnv.resolve("${datadir}/enigma2/keymap_usermod.xml")]\
 		+ eEnv_resolve_multi("${sysconfdir}/opkg/*-secret-feed.conf")\
-		+ eEnv_resolve_multi("${datadir}/enigma2/*/mySkin_off")\
-		+ eEnv_resolve_multi("${datadir}/enigma2/*/mySkin")\
-		+ eEnv_resolve_multi("${datadir}/enigma2/*/skin_user_*.xml")\
 		+ eEnv_resolve_multi("/usr/bin/*cam*")\
 		+ eEnv_resolve_multi("/etc/*.emu")\
 		+ eEnv_resolve_multi("${sysconfdir}/cron*")\
@@ -533,17 +529,6 @@ class RestoreScreen(Screen, ConfigListScreen):
 		SH_List.append('/media/mmc/images/config/myrestore.sh')
 		SH_List.append('/media/cf/images/config/myrestore.sh')
 
-		startSH = None
-		for SH in SH_List:
-			if pathexists(SH):
-				startSH = SH
-				break
-
-		if startSH:
-			self.session.openWithCallback(self.restoreMetrixSkin, Console, title=_("Running Myrestore script, Please wait ..."), cmdlist=[startSH], closeOnSuccess=True)
-		else:
-			self.restoreMetrixSkin()
-
 	def restartGUI(self, ret=None):
 		self.session.open(Console, title=_("Your %s %s will Restart...") % (getMachineBrand(), getMachineName()), cmdlist=["killall -9 enigma2"])
 
@@ -556,68 +541,8 @@ class RestoreScreen(Screen, ConfigListScreen):
 		except:
 			self.restartGUI()
 
-	def restoreMetrixSkin(self, ret=None):
-		configfile.load()
-		configfile.save()
-		try:
-			f = open("/etc/enigma2/settings", "r")
-			s = f.read()
-			f.close()
-			restore = "config.skin.primary_skin=MetrixHD/skin.MySkin.xml" in s
-		except:
-			restore = False
-		if restore:
-			self.session.openWithCallback(self.rebootSYS, RestoreMyMetrixHD)
-		else:
-			self.rebootSYS()
-
 	def runAsync(self, finished_cb):
 		self.doRestore()
-
-
-class RestoreMyMetrixHD(Screen):
-
-	def __init__(self, session):
-		Screen.__init__(self, session)
-		skin = """
-			<screen name="RestoreMetrixHD" position="center,center" size="600,100" title="Restore MetrixHD Settings">
-			<widget name="label" position="10,30" size="500,50" halign="center" font="Regular;20" transparent="1" foregroundColor="white" />
-			</screen> """
-		self.skin = skin
-		self["label"] = Label(_("Please wait while your skin setting is restoring..."))
-		self["summary_description"] = StaticText(_("Please wait while your skin setting is restoring..."))
-		self.onShown.append(self.setWindowTitle)
-
-		# if not waiting is bsod possible (RuntimeError: modal open are allowed only from a screen which is modal!)
-		self.restoreSkinTimer = eTimer()
-		self.restoreSkinTimer.callback.append(self.restoreSkin)
-		self.restoreSkinTimer.start(1000, True)
-
-	def setWindowTitle(self):
-		self.setTitle(_("Restore MetrixHD Settings"))
-
-	def restoreSkin(self):
-		try:
-			from Plugins.Extensions.MyMetrixLite.ActivateSkinSettings import ActivateSkinSettings
-			result = ActivateSkinSettings().WriteSkin(True)
-			if result:
-				infotext = ({1: _("Unknown Error creating Skin.\nPlease check after reboot MyMetrixLite-Plugin and apply your settings."),
-							2: _("Error creating HD-Skin. Not enough flash memory free."),
-							3: _("Error creating EHD-Skin. Not enough flash memory free.\nUsing HD-Skin!"),
-							4: _("Error creating EHD-Skin. Icon package download not available.\nUsing HD-Skin!"),
-							5: _("Error creating EHD-Skin.\nUsing HD-Skin!"),
-							6: _("Error creating EHD-Skin. Some EHD-Icons are missing.\nUsing HD-Skin!"),
-							7: _("Error, unknown Result!"),
-							}[result])
-				self.session.openWithCallback(self.checkSkinCallback, MessageBox, infotext, MessageBox.TYPE_ERROR, timeout=30)
-			else:
-				self.close()
-		except:
-			self.session.openWithCallback(self.checkSkinCallback, MessageBox, _("Error creating MetrixHD-Skin.\nPlease check after reboot MyMetrixLite-Plugin and apply your settings."), MessageBox.TYPE_ERROR, timeout=30)
-
-	def checkSkinCallback(self, ret=None):
-		self.close()
-
 
 class RestartNetwork(Screen):
 

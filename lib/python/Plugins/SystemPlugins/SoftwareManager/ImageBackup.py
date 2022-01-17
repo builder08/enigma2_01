@@ -140,7 +140,7 @@ class ImageBackup(Screen):
 		if answer is not None:
 			if answer[1]:
 				self.RECOVERY = answer[3]
-				self.DIRECTORY = "%s/images" % answer[2]
+				self.DIRECTORY = "%s" % answer[2]
 				if not os.path.exists(self.DIRECTORY):
 					try:
 						os.makedirs(self.DIRECTORY)
@@ -574,7 +574,7 @@ class ImageBackup(Screen):
 		if BoxInfo.getItem("canRecovery") and self.RECOVERY:
 			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_recovery_emmc.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
 		else:
-			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_usb.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
+			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_mmc.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
 
 		cmdlist.append("sync")
 		file_found = True
@@ -600,7 +600,7 @@ class ImageBackup(Screen):
 
 		if BoxInfo.getItem("canMultiBoot") and not self.RECOVERY and not BoxInfo.getItem("HasRootSubdir"):
 			cmdlist.append('echo "_________________________________________________\n"')
-			cmdlist.append('echo "' + _("Multiboot Image created on: %s/%s-%s-%s-backup-%s_usb.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
+			cmdlist.append('echo "' + _("Multiboot Image created on: %s/%s-%s-%s-backup-%s_mmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			cmdlist.append('echo "_________________________________________________"')
 			cmdlist.append('echo " "')
 			cmdlist.append('echo "' + _("Please wait...almost ready! ") + '"')
@@ -613,7 +613,7 @@ class ImageBackup(Screen):
 			if BoxInfo.getItem("canRecovery") and self.RECOVERY:
 				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_recovery_emmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			else:
-				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_usb.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
+				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_mmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			cmdlist.append('echo "_________________________________________________"')
 			cmdlist.append('echo " "')
 			cmdlist.append('echo "' + _("Please wait...almost ready! ") + '"')
@@ -649,10 +649,10 @@ class ImageBackup(Screen):
 
 	def imageInfo(self):
 		AboutText = _("Full Image Backup ")
-		AboutText += _("By openATV Image Team") + "\n"
-		AboutText += _("Support at") + " www.opena.tv\n\n"
+		AboutText += _("OpenFIX") + "\n"
+		AboutText += _("Support at") + " https://gisclub.tv\n\n"
 		AboutText += _("[Image Info]\n")
-		AboutText += _("Model: %s %s\n") % (getMachineBrand(), getMachineName())
+		AboutText += _("Model: %s\n") % (getMachineBrand(), getMachineName())
 		AboutText += _("Backup Date: %s\n") % strftime("%Y-%m-%d", localtime(self.START))
 
 		if os.path.exists('/proc/stb/info/chipset'):
