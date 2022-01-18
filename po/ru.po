@@ -24769,3 +24769,17 @@ msgstr "Версия Enigma2:\t%s"
 msgid "Last Enigma2 update:\t%s"
 msgstr "Последнее обновление Enigma2:\t%s"
 
+msgid "Creating archive: "
+msgstr "Создан архив: "
+
+msgid "Items to compress: "
+msgstr "Объекты для сжатия: "
+
+msgid "Files read from disk: "
+msgstr "Количество файлов: "
+
+msgid "Archive size: "
+msgstr "Размер архива: "
+
+msgid "Everything is Ok"
+msgstr "Все в порядке!"
