@@ -538,31 +538,36 @@ class FlashImage(Screen):
 	def flashimage(self):
 		self["header"].setText(_("Flashing Image"))
 		self["summary_header"].setText(self["header"].getText())
-
 		def findimagefiles(path):
 			for path, subdirs, files in os.walk(path):
 				if not subdirs and files:
 					return checkimagefiles(files) and path
 		imagefiles = findimagefiles(self.unzippedimage)
 		if imagefiles:
-			self.ROOTFSSUBDIR = "none"
 			self.getImageList = self.saveImageList
+			self.MTDKERNEL = GetCurrentKern()
+			self.MTDROOTFS = GetCurrentRoot()
 			if SystemInfo["canMultiBoot"]:
-				self.MTDKERNEL = SystemInfo["canMultiBoot"][self.multibootslot]["kernel"].split('/')[2]
-				self.MTDROOTFS = SystemInfo["canMultiBoot"][self.multibootslot]["device"].split('/')[2]
-				if SystemInfo["HasRootSubdir"]:
-					self.ROOTFSSUBDIR = SystemInfo["canMultiBoot"][self.multibootslot]['rootsubdir']
-			else:
-				self.MTDKERNEL = getMachineMtdKernel()
-				self.MTDROOTFS = getMachineMtdRoot()
-			CMD = "/usr/bin/ofgwrite -r -k '%s'" % imagefiles	#normal non multiboot receiver
+				if "sd" in self.getImageList[self.multibootslot]['part']:
+					self.MTDKERNEL = "%s%s" %(SystemInfo["canMultiBoot"][2], int(self.getImageList[self.multibootslot]['part'][3])-1)
+					self.MTDROOTFS = "%s" %(self.getImageList[self.multibootslot]['part'])
 			if SystemInfo["canMultiBoot"]:
-				if (self.ROOTFSSUBDIR) is None:	# receiver with SD card multiboot
-					CMD = "/usr/bin/ofgwrite -r%s -k%s -m0 '%s'" % (self.MTDROOTFS, self.MTDKERNEL, imagefiles)
+				if getMachineBuild() in ("gbmv200","cc1","sf8008","sf8008m","ustym4kpro","beyonwizv2","viper4k"): # issue detect kernel device and rootfs on sda
+					print("[FlashImage] detect Kernel:",self.MTDKERNEL)
+					print("[FlashImage] detect rootfs:",self.MTDROOTFS)
+					command = "/usr/bin/ofgwrite -r%s -k%s %s" % (self.MTDROOTFS, self.MTDKERNEL, imagefiles)
 				else:
-					CMD = "/usr/bin/ofgwrite -r -k -m%s '%s'" % (self.multibootslot, imagefiles)
+					command = "/usr/bin/ofgwrite -r -k -m%s %s" % (self.multibootslot, imagefiles)
+			elif getMachineBuild() in ("u5pvr","u5","u51","u52","u53","u532","u533","u54","u56"): # issue detect kernel device
+				print("[FlashImage] detect Kernel:",self.MTDKERNEL)
+				print("[FlashImage] detect rootfs:",self.MTDROOTFS)
+				command = "/usr/bin/ofgwrite -r%s -k%s %s" % (self.MTDROOTFS, self.MTDKERNEL, imagefiles)
+			else:
+				if fileExists("%s/rootfs.ubi" %imagefiles) and fileExists("%s/rootfs.tar.bz2" %imagefiles):
+					os.rename('%s/rootfs.tar.bz2' %imagefiles, '%s/xx.txt' %imagefiles)
+				command = "/usr/bin/ofgwrite -r -k %s" % imagefiles
 			self.containerofgwrite = Console()
-			self.containerofgwrite.ePopen(CMD, self.FlashimageDone)
+			self.containerofgwrite.ePopen(command, self.FlashimageDone)
 			fbClass.getInstance().lock()
 		else:
 			self.session.openWithCallback(self.abort, MessageBox, _("Image to install is invalid\n%s") % self.imagename, type=MessageBox.TYPE_ERROR, simple=True)

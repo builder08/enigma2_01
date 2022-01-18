@@ -30,7 +30,7 @@ if sys.version_info[0] >= 3:
 else:
 	import commands
 
-VERSION = _("Version %s %s") % (getImageDistro(), getImageVersion())
+VERSION = _("Image %s %s") % (getImageDistro().upper(), getImageVersion())
 
 
 class ImageBackup(Screen):
@@ -222,19 +222,15 @@ class ImageBackup(Screen):
 
 				self.message = "echo -e '\n"
 				if getMachineBrand().startswith('A') or getMachineBrand().startswith('E') or getMachineBrand().startswith('I') or getMachineBrand().startswith('O') or getMachineBrand().startswith('U') or getMachineBrand().startswith('Xt'):
-					self.message += (_('Back-up Tool for an %s\n') % self.SHOWNAME).upper()
+					self.message += (_('Full Back-up for an %s\n') % self.SHOWNAME).upper()
 				else:
 					self.message += (_('Back-up Tool for a %s\n') % self.SHOWNAME).upper()
+				self.message += "_________________________________________________\n\n"
 				self.message += VERSION + '\n'
 				self.message += "_________________________________________________\n\n"
 				self.message += _("Please be patient, a backup will now be made,\n")
 				self.message += _("because of the used filesystem the back-up\n")
 				self.message += _("will take about 1-15 minutes for this system\n")
-				self.message += "_________________________________________________\n\n"
-				if self.RECOVERY:
-					self.message += _("Backup Mode: USB Recovery\n")
-				else:
-					self.message += _("Backup Mode: Flash Online\n")
 				self.message += "_________________________________________________\n"
 				self.message += "'"
 
@@ -574,7 +570,7 @@ class ImageBackup(Screen):
 		if BoxInfo.getItem("canRecovery") and self.RECOVERY:
 			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_recovery_emmc.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
 		else:
-			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_mmc.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
+			cmdlist.append('7za a -r -bt -bd %s/%s-%s-%s-backup-%s_usb.zip %s/*' % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE, self.MAINDESTROOT))
 
 		cmdlist.append("sync")
 		file_found = True
@@ -600,7 +596,7 @@ class ImageBackup(Screen):
 
 		if BoxInfo.getItem("canMultiBoot") and not self.RECOVERY and not BoxInfo.getItem("HasRootSubdir"):
 			cmdlist.append('echo "_________________________________________________\n"')
-			cmdlist.append('echo "' + _("Multiboot Image created on: %s/%s-%s-%s-backup-%s_mmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
+			cmdlist.append('echo "' + _("Multiboot Image created on: %s/%s-%s-%s-backup-%s_usb.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			cmdlist.append('echo "_________________________________________________"')
 			cmdlist.append('echo " "')
 			cmdlist.append('echo "' + _("Please wait...almost ready! ") + '"')
@@ -613,7 +609,7 @@ class ImageBackup(Screen):
 			if BoxInfo.getItem("canRecovery") and self.RECOVERY:
 				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_recovery_emmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			else:
-				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_mmc.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
+				cmdlist.append('echo "' + _("Image created on: %s/%s-%s-%s-backup-%s_usb.zip") % (self.DIRECTORY, self.IMAGEDISTRO, self.DISTROVERSION, self.MODEL, self.DATE) + '"')
 			cmdlist.append('echo "_________________________________________________"')
 			cmdlist.append('echo " "')
 			cmdlist.append('echo "' + _("Please wait...almost ready! ") + '"')
@@ -648,11 +644,11 @@ class ImageBackup(Screen):
 		self.session.open(Console, title=self.TITLE, cmdlist=cmdlist, closeOnSuccess=False)
 
 	def imageInfo(self):
-		AboutText = _("Full Image Backup ")
-		AboutText += _("OpenFIX") + "\n"
+		AboutText = _("Full Back-up Image ")
+		AboutText += _("By OpenFIX") + "\n"
 		AboutText += _("Support at") + " https://gisclub.tv\n\n"
 		AboutText += _("[Image Info]\n")
-		AboutText += _("Model: %s\n") % (getMachineBrand(), getMachineName())
+		AboutText += _("Model: %s %s\n") % (getMachineBrand(), getMachineName())
 		AboutText += _("Backup Date: %s\n") % strftime("%Y-%m-%d", localtime(self.START))
 
 		if os.path.exists('/proc/stb/info/chipset'):
