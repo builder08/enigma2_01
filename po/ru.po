@@ -3439,8 +3439,11 @@ msgid "Back-up Tool for a %s\n"
 msgstr "Копирование/восстановление для %s\n"
 
 #, python-format
-msgid "Back-up Tool for an %s\n"
-msgstr "Резервный инструмент для %s\n"
+# msgid "Back-up Tool for an %s\n"
+# msgstr "Резервный инструмент для %s\n"
+
+msgid "Full Back-up for an %s\n"
+msgstr "Полная резервная копия для %s\n"
 
 msgid "Back/Recall"
 msgstr "Назад/Вернуться"
@@ -8639,6 +8642,9 @@ msgstr "Фулах"
 
 msgid "Full Image Backup "
 msgstr "Полное копирование имиджа "
+
+msgid "Full Back-up Image "
+msgstr "Полная резервная копия имиджа "
 
 msgid "Full Range RGB"
 msgstr "Полный RGB"
@@ -24599,7 +24605,7 @@ msgid "width"
 msgstr "Ширина"
 
 msgid "will take about 1-15 minutes for this system\n"
-msgstr "займет около 1-15 минут для этой системы\n"
+msgstr "Займет около 1-15 минут для этой системы\n"
 
 msgid "winter sport"
 msgstr "Зимний спорт"
