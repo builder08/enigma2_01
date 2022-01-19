@@ -14918,10 +14918,10 @@ msgid "Resuming playback"
 msgstr "Возобновление воспроизведения"
 
 msgid "Retrieving image list - Please wait..."
-msgstr "Получаем список эмуляторов. Пожалуйста подождите..."
+msgstr "Получение списка имиджей. Пожалуйста, подождите..."
 
 msgid "Retrieving image slots - Please wait..."
-msgstr "Идёт распаковка имиджей, пожалуйста подождите..."
+msgstr "Идёт распаковка имиджей. Пожалуйста, подождите..."
 
 msgid "Return to movie list"
 msgstr "Вернуться к списку фильмов"
@@ -24783,3 +24783,4 @@ msgstr "Размер архива: "
 
 msgid "Everything is Ok"
 msgstr "Все в порядке!"
+
