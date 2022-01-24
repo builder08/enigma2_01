@@ -17276,7 +17276,7 @@ msgid "Show satellites list"
 msgstr "Показать список спутников"
 
 msgid "Show screen menu path"
-msgstr "Показать заставку"
+msgstr "Показать путь к экранному меню"
 
 msgid "Show screensaver"
 msgstr "Показать заставку"
