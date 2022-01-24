@@ -75,7 +75,7 @@ def InitUsageConfig():
 	config.usage.update_available = NoSave(ConfigYesNo(default=False))
 	config.misc.ecm_info = ConfigYesNo(default=False)
 	config.usage.menu_show_numbers = ConfigYesNo(default=False)
-	config.usage.showScreenPath = ConfigSelection(default="off", choices=[("off", _("None")), ("small", _("Small")), ("large", _("Large"))])
+	config.usage.showScreenPath = ConfigSelection(default="small", choices=[("off", _("None")), ("small", _("Small")), ("large", _("Large"))])
 	if fileContains("/etc/network/interfaces", "iface eth0 inet static") and not fileContains("/etc/network/interfaces", "iface wlan0 inet dhcp") or fileContains("/etc/network/interfaces", "iface wlan0 inet static") and fileContains("/run/ifstate", "wlan0=wlan0"):
 		config.usage.dns = ConfigSelection(default="custom", choices=[
 			("custom", _("Static IP or Custom")),
@@ -418,7 +418,7 @@ def InitUsageConfig():
 			m = abs(i / 60)
 			m = ngettext("%d minute", "%d minutes", m) % m
 		choicelist.append(("%d" % i, m))
-	config.usage.screen_saver = ConfigSelection(default="0", choices=choicelist)
+	config.usage.screen_saver = ConfigSelection(default="300", choices=choicelist)
 
 	config.usage.check_timeshift = ConfigYesNo(default=True)
 
