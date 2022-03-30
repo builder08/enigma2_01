@@ -123,7 +123,7 @@ def getAboutText():
 			else:
 				image -= 1
 			part = "SDcard slot %s (%s) " % (image, BoxInfo.getItem("canMultiBoot")[slot]['device'])
-	AboutText += _("Selected Image:\t%s") % _("STARTUP_") + str(slot) + " (" + part + bootmode + ")\n\n"
+	# AboutText += _("Selected Image:\t%s") % _("STARTUP_") + str(slot) + " (" + part + bootmode + ")\n\n"
 	# For Genius E3HD to comment! For ARM to uncomment! \\\ 126
 	
 	AboutText += _("Image:\t\t%s") % _("OpenFIX ") + about.getImageTypeString() + "\n\n"
