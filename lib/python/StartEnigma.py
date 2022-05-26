@@ -723,7 +723,7 @@ elif getMachineBrand() == 'Zgemma':
 elif getMachineBrand() == 'Beyonwiz':
 	defaultLanguage = "en_GB"
 else:
-	defaultLanguage = "de_DE"
+	defaultLanguage = "en_US"
 
 defaultCountry = defaultLanguage[-2:]
 defaultShortLanguage = defaultLanguage[0:2]
