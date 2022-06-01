@@ -3990,18 +3990,18 @@ msgid "CIselectMainMenu"
 msgstr "Выбор главного меню"
 
 msgid "CPU"
-msgstr "ЦП"
+msgstr "Процессор"
 
 msgid "CPU priority for script execution"
 msgstr "Приоритет ЦП для выполнения скрипта"
 
 #, python-format
 msgid "CPU:\t\t%s  (%s)  %s cores"
-msgstr "Процессор:\\t\\t%s  (%s)  %s ядра"
+msgstr "Процессор: \t\t%s  (%s)  %s ядра"
 
 #, python-format
 msgid "CPU: %s"
-msgstr "ЦП: %s"
+msgstr "Процессор: %s"
 
 msgid "CVBS"
 msgstr "CVBS"
@@ -4538,12 +4538,12 @@ msgid "Chipset"
 msgstr "Читсет"
 
 #, python-format
-msgid "Chipset:\t\t%s"
-msgstr "Чипсет: %s"
+msgid "Chipset: \t\t%s"
+msgstr "Чипсет: \t\t%s"
 
 #, python-format
 msgid "Chipset: BCM%s"
-msgstr "Чипсет BCM%s"
+msgstr "Чипсет: BCM%s"
 
 msgid "Choice Box"
 msgstr "Меню выбора"
@@ -7065,11 +7065,11 @@ msgstr "Формат данных DVD (Несовместим с некотор�
 
 #, python-format
 msgid "Drivers:\t\t%s"
-msgstr "Драйверы:\\t\\t%s"
+msgstr "Драйверы:\t\t%s"
 
 #, python-format
 msgid "Drivers:\t%s"
-msgstr "Драйверы: %s"
+msgstr "Драйверы:\t%s"
 
 msgid "Drogen"
 msgstr "Дроген"
@@ -7596,7 +7596,7 @@ msgstr ""
 
 #, python-format
 msgid "Enigma2 debug level:\t%d"
-msgstr "Уровень отладки Enigma2:\\t%d"
+msgstr "Уровень отладки Enigma2:\t%d"
 
 msgid "Enigma2 skin selector"
 msgstr "Селектор скинов Enigma2"
@@ -8685,7 +8685,7 @@ msgstr "GIGABLUE Черный"
 
 #, python-format
 msgid "GStreamer:\t\t%s"
-msgstr "Версия GStreamer:\\t%s"
+msgstr "Версия GStreamer:\t\t%s"
 
 msgid ""
 "GUI needs a restart to apply a new language\n"
@@ -10370,11 +10370,11 @@ msgstr "Ядро"
 
 #, python-format
 msgid "Kernel:\t\t%s"
-msgstr "Ядро:\\t\\t%s"
+msgstr "Ядро: \t\t%s"
 
 #, python-format
 msgid "Kernel: %s"
-msgstr "Ядро:\\t\\t%s"
+msgstr "Ядро: %s"
 
 msgid "Keyboard"
 msgstr "Клавиатура"
@@ -11324,7 +11324,7 @@ msgstr "Режим"
 
 #, python-format
 msgid "Mode %s (%04o)"
-msgstr "Модель %s (%04o)"
+msgstr "Режим %s (%04o)"
 
 msgid "Mode 1"
 msgstr "Режим 1"
@@ -11344,14 +11344,14 @@ msgstr "Режим для автовосстановления"
 
 #, python-format
 msgid "Model:\t\t%s %s\n"
-msgstr "Модель:\\t\\t%s %s\n"
+msgstr "Модель: \t\t%s %s\n"
 
 msgid "Model: "
 msgstr "Модель: "
 
 #, python-format
 msgid "Model: %s %s\n"
-msgstr "Модель:\\t\\t%s %s\\\n"
+msgstr "Модель: %s %s\n"
 
 msgid "Modified:"
 msgstr "Изменено:"
@@ -12463,7 +12463,7 @@ msgstr "Журнал OE"
 
 #, python-format
 msgid "OEM Model:\t\t%s\n"
-msgstr "OEM Модель:\\t\\t%s\n"
+msgstr "OEM Модель: \t\t%s\n"
 
 msgid "OK"
 msgstr "OK"
@@ -12679,7 +12679,7 @@ msgstr "Главная страница OpenDNS"
 
 #, python-format
 msgid "OpenSSL:\t\t%s"
-msgstr "Версия OpenSSL:\\t%s"
+msgstr "Версия OpenSSL:\t\t%s"
 
 msgid "OpenVPN"
 msgstr "OpenVPN"
@@ -14165,7 +14165,7 @@ msgstr "Питоновский интерфейс для /tmp/mmi.socket"
 
 #, python-format
 msgid "Python:\t\t%s"
-msgstr "Версия Python:\\t\\t%s"
+msgstr "Версия Python:\t\t%s"
 
 msgid "Qatar"
 msgstr "Катар"
@@ -16105,10 +16105,6 @@ msgid "Select/Zap to selected service"
 msgstr "Переключить на выбранный канал"
 
 #, python-format
-msgid "Selected Image:\t\t%s"
-msgstr "Выбранный имидж: %s"
-
-#, python-format
 msgid ""
 "Selected settingslist:\n"
 "\n"
@@ -17565,7 +17561,7 @@ msgstr "Выбор скина"
 
 #, python-format
 msgid "Skin:\t\t%s"
-msgstr "Скин:\\t\\t%s"
+msgstr "Скин:\t\t%s"
 
 msgid "SkinSelector"
 msgstr "Плагин SkinSelector"
@@ -20748,7 +20744,7 @@ msgstr "Время работы"
 
 #, python-format
 msgid "Uptime:\t\t%s"
-msgstr "Время работы:\\t\\t%s"
+msgstr "Время работы:\t\t%s"
 
 msgid "Urdu"
 msgstr "Урду"
@@ -24737,7 +24733,7 @@ msgstr "Идея: BlackFish\n\n"
 "moskvish"
 
 msgid "FFmpeg:\t\t%s"
-msgstr "Версия FFmpeg:\\t\\t%s"
+msgstr "Версия FFmpeg:\t\t%s"
 
 msgid "GCC:\t\t%s"
 msgstr "Версия GCC:\t\t%s"
@@ -24766,8 +24762,8 @@ msgstr "Дата сборки:\t\t%s"
 msgid "Enigma2 version:\t%s"
 msgstr "Версия Enigma2:\t%s"
 
-msgid "Last Enigma2 update:\t%s"
-msgstr "Последнее обновление Enigma2:\t%s"
+msgid "Last Enigma2 update:\t\t%s"
+msgstr "Последнее обновление Enigma2:\t\t%s"
 
 msgid "Creating archive: "
 msgstr "Создан архив: "
