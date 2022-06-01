@@ -27,7 +27,7 @@
 		<item weight="15" level="0" text="Network" entryID="device_screen"><screen module="About" screen="SystemNetworkInfo"/></item>
 		<item weight="20" level="1" text="Service" entryID="service_info_screen"><screen module="ServiceInfo" screen="ServiceInfo"/></item>
 		<item weight="25" level="2" text="Streaming clients info" entryID="streaming_clients_info_screen"><screen module="StreamingClientsInfo"/></item>
-		<item weight="30" level="0" text="Geolocation" entryID="geolocation_screen"><screen module="About" screen="Geolocation"/></item>
+		<!--item weight="30" level="0" text="MultiBoot" entryID="multiboot_info_screen" requires="canMultiBoot"><screen module="About" screen="MultiBootInformation" /></item-->
 		<item weight="35" level="0" text="QR code" entryID="qr_code_screen"><screen module="About" screen="QRCode"/></item>
 		<item weight="40" level="0" text="Development sponsors" entryID="development_sponsors_screen"><screen module="About" screen="DevelopmentSponsors"/></item>
 		<item weight="45" level="0" text="About Image" entryID="about_image_screen"><screen module="About" screen="AboutImage"/></item>
@@ -52,6 +52,8 @@
 		<menu weight="0" level="0" text="Video" entryID="video_menu">
 			<id val="video_menu" />
 			<item weight="0" level="0" text="Basic settings" entryID="video_setup"><screen module="VideoMode" screen="VideoSetup" /></item>
+			<item entryID="osdsetup" level="1" text="OSD Position" weight="50" requires="CanChangeOsdPosition"><screen module="UserInterfacePositioner" screen="UserInterfacePositioner2" /></item>
+			<item entryID="setup_osd3d" level="2" text="OSD 3D Settings" weight="60" requires="CanChange3DOsd"><setup id="OSD3D" /></item>
 		</menu>
 
 		<!-- Menu / Settings / Audio Menu -->
@@ -90,7 +92,6 @@
 			<!-- Menu / Settings / System / Extended System / OSD settings -->
 			<menu weight="40" level="1" text="Extended GUI" entryID="osd_setup">
 				<id val="osd_menu" />
-				<item weight="10" level="1" text="OSD Position" entryID="osdsetup" requires="CanChangeOsdPosition"><screen module="UserInterfacePositioner" screen="UserInterfacePositioner2"/></item>
 				<item weight="20" level="1" text="Input devices" entryID="input_device_setup"><screen module="InputDeviceSetup" screen="InputDeviceSelection" /></item>
 				<item weight="30" level="1" text="Remote Control Code" entryID="remotecode" requires="RemoteCode">
 					<code>
