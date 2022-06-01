@@ -23,7 +23,7 @@ def getImageVersionString():
 			st = os.stat('/var/lib/opkg/status')
 		tm = time.localtime(st.st_mtime)
 		if tm.tm_year >= 2018:
-			return time.strftime("%d.%m.%Y %H:%M:%S", tm)
+			return time.strftime("%H:%M:%S %d.%m.%Y", tm)
 	except:
 		pass
 	return _("unavailable")
